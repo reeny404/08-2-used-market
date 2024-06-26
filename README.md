@@ -32,7 +32,7 @@ export type SDeal<IsDetail extends boolean = false> = {
   price: number;
   likesCount: number;
   location: string;
-} & **(**IsDetail extends true
+} & (IsDetail extends true
   ? {
     seller: {
       avatarImgURL: string;
@@ -43,6 +43,6 @@ export type SDeal<IsDetail extends boolean = false> = {
     content: string;
     viewsCount: number;
   }
-  : {}**)**;
+  : {});
 ```
 
