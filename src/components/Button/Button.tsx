@@ -35,11 +35,15 @@ const buttonVariant = cva("rounded border font-semibold hover:brightness-90 acti
 
 function Button({ intent, size, outline, children, ...props }: ButtonProps) {
   if (props.href === undefined) {
-    return <button className={buttonVariant({ intent, size, outline })}>{children}</button>;
+    return (
+      <button className={buttonVariant({ intent, size, outline })} {...props}>
+        {children}
+      </button>
+    );
   }
 
   return (
-    <Link href={props.href} className={buttonVariant({ intent, size, outline })}>
+    <Link className={buttonVariant({ intent, size, outline })} {...props}>
       {children}
     </Link>
   );
