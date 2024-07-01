@@ -46,3 +46,7 @@ export type SDeal<IsDetail extends boolean = false> = {
   : {}**)**;
 ```
 
+## "use client"; 언제 사용하나요?
+1. hook 사용할 때
+2. window, document 등 브라우저 지원하는 API 사용할 때
+3. interactive (onClick, onChange 핸들러 연결해야 함)

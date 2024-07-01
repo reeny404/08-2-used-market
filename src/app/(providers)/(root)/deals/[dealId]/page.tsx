@@ -1,3 +1,4 @@
+import Button from "@/components/Button";
 import Page from "@/components/Page";
 import { SDeal } from "@/schema/Deal.schema";
 import Image from "next/image";
@@ -22,7 +23,7 @@ const deal: SDeal<true> = {
 
 function DealDetailPage() {
   return (
-    <Page title={deal.title} isTitleHidden>
+    <Page title={deal.title} isTitleHidden width="sm">
       {/* 이미지 */}
       <div className="relative aspect-square">
         <Image src={deal.imgURL} alt={deal.title} fill unoptimized className="object-cover" />
@@ -43,6 +44,13 @@ function DealDetailPage() {
       <div>
         <div>{deal.likesCount}</div>
         <div>{deal.viewsCount}</div>
+      </div>
+      {/* 찜하기 */}
+      <div>
+        <Button>찜하기</Button>
+        <Button intent="danger">찜 취소하기</Button>
+        <Button>글 수정하기</Button>
+        <Button intent="danger">글 삭제하기</Button>
       </div>
       DealDetailPage
     </Page>
