@@ -12,8 +12,9 @@ function SignUpPage() {
     console.log(supabase);
 
     const { data, error } = await supabase.auth.signUp({
-      email: "test@test.com",
+      email: "example@email.com",
       password: "example-password",
+      options: { data: { nickname: "튜터" } },
     });
 
     console.log("data", data);
