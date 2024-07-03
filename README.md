@@ -50,3 +50,8 @@ export type SDeal<IsDetail extends boolean = false> = {
 1. hook 사용할 때
 2. window, document 등 브라우저 지원하는 API 사용할 때
 3. interactive (onClick, onChange 핸들러 연결해야 함)
+
+## .env.local 에 값을 넣을 때, 공백없이 넣는다.
+: **key=value **
+: nextjs, vite 모두 key값에 prefix가 필수이니 문서 확인해서 넣을 것
+
